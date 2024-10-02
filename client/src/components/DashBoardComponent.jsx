@@ -174,7 +174,6 @@ export default function DashBoardComponent() {
             <TableHead>
               <TableHeadCell> IMAGE</TableHeadCell>
               <TableHeadCell>TITLE</TableHeadCell>
-              <TableHeadCell>category</TableHeadCell>
             </TableHead>
             {posts &&
               posts.map((post) => (
@@ -184,11 +183,10 @@ export default function DashBoardComponent() {
                       <img
                         src={post.image}
                         alt=""
-                        className="h-10 w-10 rounded-md object-cover"
+                        className="h-10 w-14 rounded-md "
                       />
                     </TableCell>
                     <TableCell className="w-96">{post.title}</TableCell>
-                    <TableCell>{post.category}</TableCell>
                   </TableRow>
                 </TableBody>
               ))}
@@ -210,8 +208,8 @@ export default function DashBoardComponent() {
               comments.map((comment) => (
                 <TableBody key={comment._id} className="divide-y">
                   <TableRow className="bg-white dark:border-gray-700 dark:bg-gray-800">
-                    <TableCell className="w-96 line-clamp-2">
-                      {comment.content}
+                    <TableCell className="w-96">
+                     <p className="line-clamp-2"> {comment.content}</p>
                     </TableCell>
                     <TableCell>{comment.numberOfLikes}</TableCell>
                   </TableRow>

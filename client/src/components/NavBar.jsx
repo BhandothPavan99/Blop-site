@@ -73,17 +73,18 @@ function NavBar() {
           type="text"
           placeholder="Search..."
           rightIcon={AiOutlineSearch}
-          className=" hidden lg:inline"
+          className="hidden lg:inline"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />
       </form>
+      <Link to={'/search'}>
       <Button className="lg:hidden w-12 h-10" color="gray" pill>
         <AiOutlineSearch />
-      </Button>
+      </Button></Link>
       <div className="flex gap-3 md:order-2">
         <Button
-          className="sm:inline w-12 h-10 "
+          className="sm:inline hidden w-12 h-10 "
           color="gray"
           pill
           onClick={() => dispatch(toggleTheme())}

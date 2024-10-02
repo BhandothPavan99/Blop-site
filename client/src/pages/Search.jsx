@@ -181,11 +181,11 @@ export default function Search() {
           </Button>
         </form>
       </div>
-      <div className="w-full">
+      <div className="w-full ">
         <h1 className="text-center font-semibold text-2xl border-b p-4">
           Results
         </h1>
-        <div className="flex flex-wrap p-5 gap-5 ">
+        <div className="flex flex-wrap p-5 gap-5 justify-center ">
           {!loading && posts.length === 0 && (
             <p className="text-xl text-center font-semibold">
               No posts found...
