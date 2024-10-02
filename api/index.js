@@ -7,6 +7,7 @@ import postRoute from "./routes/postRoute.js";
 import commentRoute from "./routes/commentRoute.js"
 import cookieParser from "cookie-parser";
 import cors from "cors"
+import path, { join } from "path"
 dotenv.config();
 const app = express();
 const PORT = 3000;
@@ -22,12 +23,15 @@ mongoose
   .catch((err) => {
     console.log(err);
   });
-
+const __dirname = path.resolve()
 app.use("/api", userRoute);
 app.use("/api", authRoute);
 app.use("/api", postRoute);
 app.use("/api/comment",commentRoute)
-
+app.use(express.static(path.join(__dirname , 'client/dist')))
+app.use('*',(req , res)=>{
+  res.sendFile(path.join(__dirname ,"client" ,"dist" , "index.html"))
+} )
 app.listen(PORT, () => {
   console.log(`Server Started At :${PORT}`);
 });

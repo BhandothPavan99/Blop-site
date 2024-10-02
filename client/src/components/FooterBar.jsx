@@ -49,7 +49,7 @@ function FooterBar() {
             <FooterIcon href="#" icon={BsFacebook} />
             <FooterIcon href="#" icon={BsInstagram} />
             <FooterIcon href="#" icon={BsTwitter} />
-            <FooterIcon href="https://github.com/BhandothPavan" icon={BsGithub} />
+            <FooterIcon href="https://github.com/BhandothPavan99" icon={BsGithub} />
           </div>
         </div>
       </div>
